@@ -1,0 +1,22 @@
+<h1>display content of spool : "<%= @name %>"</h1>
+
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th> Entry </th>
+            <th> Value </th>
+        </tr>
+    <thead>
+    <tbody>
+        <% @data.each do |element| %>
+            <tr><td><%=element[:name]%></td><td><%=element[:content]%></td></tr>
+        <% end %>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row"> Total entries</th>
+            <td> <%= @data.size %></td> 
+        </tr>
+    </tfoot>
+</table>
